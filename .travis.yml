@@ -14,9 +14,10 @@ cache:
   directories:
     - $HOME/.composer/cache/files
 
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y acl
+addons:
+  apt:
+    packages:
+      - acl
 
 install:
   - composer self-update
