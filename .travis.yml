@@ -20,7 +20,7 @@ before_install:
 
 install:
   - composer self-update
-  - composer update --no-interaction --prefer-source $COMPOSER_FLAGS
+  - composer update --no-interaction --prefer-dist $COMPOSER_FLAGS
 
 script:
   - vendor/bin/phpunit --coverage-clover=coverage.xml
